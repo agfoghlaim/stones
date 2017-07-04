@@ -1,0 +1,16 @@
+.contain-header{
+	margin-top: 60px;
+	width: 100%;
+	background-color: $blue;
+	display: flex;
+	justify-content:center;
+    outline: 2px solid #FFFAE4;
+    outline-offset: -15px;
+     box-sizing: border-box;
+    padding: 5%;
+
+    .logo{
+    	height: 50%;
+    	display: flex;
+    }
+}

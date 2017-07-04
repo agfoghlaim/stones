@@ -1,0 +1,209 @@
+@font-face {
+  font-family: "Roboto";
+  src: url("../fonts/Roboto-Light.ttf") format("truetype"); }
+@font-face {
+  font-family: "Bebas";
+  src: url("../fonts/BebasNeue.woff") format("woff"); }
+.moh-button {
+  text-decoration: none;
+  color: #414142;
+  padding: 2px 6px 2px 6px;
+  border: 2px solid #4C4A7C;
+  padding: 10px 15px;
+  border-radius: 1px;
+  text-align: center; }
+
+.moh-button:hover {
+  background-color: #4C4A7C;
+  border: 2px solid #C9B450;
+  color: #FFFAE4; }
+
+.light-blue {
+  background-color: #6D8AB3; }
+
+.blue {
+  background-color: #344967; }
+
+.purple {
+  background-color: #4C4A7C; }
+
+.yellow {
+  background-color: #C9B450; }
+
+.light {
+  background-color: #FFFAE4; }
+
+.pink {
+  background-color: #A1A0C9; }
+
+.black {
+  background-color: #414142; }
+
+.txt-hidden {
+  display: none; }
+
+.right {
+  justify-content: right; }
+
+.nav-container {
+  background-color: #344967;
+  display: flex;
+  z-index: 50;
+  position: fixed;
+  overflow: hidden;
+  top: 0;
+  width: 100%;
+  height: 60px; }
+  .nav-container nav {
+    width: 100%;
+    display: flex;
+    justify-content: center; }
+    .nav-container nav ul {
+      display: flex;
+      align-items: center; }
+      .nav-container nav ul li {
+        display: block;
+        padding: 16px 20px;
+        font-size: 15px; }
+        .nav-container nav ul li a {
+          text-decoration: none; }
+
+.contain-header {
+  margin-top: 60px;
+  width: 100%;
+  background-color: #344967;
+  display: flex;
+  justify-content: center;
+  outline: 2px solid #FFFAE4;
+  outline-offset: -15px;
+  box-sizing: border-box;
+  padding: 5%; }
+  .contain-header .logo {
+    height: 50%;
+    display: flex; }
+
+.welcome-row {
+  display: flex;
+  justify-content: center; }
+  .welcome-row .welcome-col {
+    display: flex;
+    width: 40%;
+    height: 320px;
+    flex-direction: column; }
+
+a, li {
+  color: #FFFAE4; }
+
+body {
+  font-family: 'Raleway', 'Roboto', arial,  sans-serif;
+  margin: 0px;
+  background-color: #FFFAE4; }
+
+h1 {
+  font-family: 'Lora', serif; }
+
+.col-text {
+  flex-direction: column;
+  padding: 5%;
+  justify-content: center;
+  outline: 2px solid #344967;
+  outline-offset: -15px;
+  box-sizing: border-box; }
+
+.hideThis {
+  display: none; }
+
+.showThis {
+  display: flex; }
+
+.row {
+  display: flex;
+  margin: 0 1%; }
+  .row .col-2 {
+    display: flex;
+    width: 50%;
+    justify-content: center;
+    align-items: center;
+    position: relative; }
+    .row .col-2 img {
+      height: 95%; }
+    .row .col-2 .col-div {
+      position: absolute;
+      top: 0;
+      left: 0;
+      opacity: 0.8;
+      width: 100%;
+      height: 100%;
+      display: flex; }
+    .row .col-2 .txt-div {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      text-align: center;
+      color: #FFFAE4;
+      z-index: 10;
+      display: flex; }
+      .row .col-2 .txt-div h3 {
+        font-weight: lighter;
+        font-size: 5vw;
+        margin: auto; }
+  .row .col-2:hover .col-div {
+    visibility: hidden; }
+  .row .col-2:hover .txt-div {
+    visibility: hidden; }
+
+.gallery-grid {
+  display: flex;
+  flex-wrap: wrap;
+  width: 50%; }
+  .gallery-grid .flex {
+    display: flex;
+    width: 33.33333%;
+    height: 33.33333%; }
+  .gallery-grid .grid-div {
+    display: flex;
+    position: relative;
+    width: 33.33333%;
+    height: 33.33333%; }
+    .gallery-grid .grid-div .flex {
+      display: flex;
+      width: 100%;
+      height: 100%; }
+    .gallery-grid .grid-div .col-div {
+      position: absolute;
+      top: 0;
+      left: 0;
+      opacity: 0.8;
+      width: 100%;
+      height: 100%;
+      display: flex; }
+    .gallery-grid .grid-div .portrait-button {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-content: center;
+      margin: auto; }
+    .gallery-grid .grid-div .txt-div {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      text-align: center;
+      color: #FFFAE4;
+      z-index: 10;
+      display: flex; }
+      .gallery-grid .grid-div .txt-div h3 {
+        font-weight: lighter;
+        font-size: 5vw;
+        margin: auto; }
+      .gallery-grid .grid-div .txt-div h3 {
+        font-size: 40px; }
+  .gallery-grid .grid-div:hover .col-div {
+    visibility: hidden; }
+  .gallery-grid .grid-div:hover .txt-div {
+    visibility: hidden; }
+
+/*# sourceMappingURL=style.css.map */
