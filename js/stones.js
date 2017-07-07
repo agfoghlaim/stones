@@ -31,13 +31,6 @@ console.log("hi");
 	heading.innerHTML = headstoneArr[count].title;
 	paragraph.innerHTML = "This is a description of photo " + headstoneArr[count].title;
 
-	// show.addEventListener('mouseenter', function(){
-	// 	showDiv.classList.toggle("hideThis", false);
-	// });
-	// show.addEventListener('mouseleave',function(){
-	// 	showDiv.classList.toggle("hideThis", true);
-	// });
-	
 			arrow.addEventListener('click', function(){
 
 				if(count < headstoneArr.length-1){
@@ -105,51 +98,31 @@ console.log("hi");
 	 	}
 	 		});
 
-	// for concerting cutout
-// var images = ['img/concertina.png', 'img/7cut.jpg','img/concertina.png'];
-// var time = 2000;
-// var i = 0;
 
-// function changePic(){
-
-// 	document.mohSlider.src = images[i];
-// 	if(i< images.length-1){
-// 		i++;
-// 	}else{
-// 		i=0;
-// 	}
-// 	setTimeout(function(){changePic();}, time);
-	
-// }
 
 //window.onload = changePic();
-function togglePlusMinus(){
-	var toggle = document.getElementsByClassName('toggle-plus-minus');
-	console.log(toggle[0].innerHTML);
-	for(i in toggle ){
-			
-	if(toggle[i].innerHTML ==="+"){
-		toggle[i].innerHTML = "-";
+function togglePlusMinus(toggle){
+	if(toggle.innerHTML ==="+"){
+		toggle.innerHTML = "-";
 	}else{
-		toggle[i].innerHTML = "+";
+		toggle.innerHTML = "+";
 	}
-
-	}
-	
-console.log(toggle[0].innerHTML);
 }
 
-var info = document.getElementsByClassName('showInfo')[0];
-var infoDiv = document.getElementsByClassName('infoDiv')[0];
-//console.log(info);
-//console.log(infoDiv);
-function toggleVisibility(){
-		//infoDiv.classList.add('visibility');
-		document.getElementById('headstone-h3').classList.toggle('hide');
-		togglePlusMinus();
-		infoDiv.classList.toggle('visibility');
-}
-info.addEventListener('click', toggleVisibility, true);
+
+	document.body.addEventListener('click', function(e){
+
+		if(e.target.classList.contains('showInfo')){
+			e.target.parentNode.nextElementSibling.classList.toggle('visibility');
+			togglePlusMinus(e.target.firstChild);
+			e.preventDefault();
+		}
+	});
+
+
+
+//}
+
 
 
 
