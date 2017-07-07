@@ -1,10 +1,10 @@
 .welcome-row{
 	display:flex;
 	justify-content:center;
+	margin: 16vh auto;
 	.welcome-col{
 		display:flex;
 		width: 40%;
-		height: 320px;
 		flex-direction:column;
 	}
 }

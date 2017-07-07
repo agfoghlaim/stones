@@ -9,13 +9,14 @@
   color: #414142;
   padding: 2px 6px 2px 6px;
   border: 2px solid #4C4A7C;
-  padding: 10px 15px;
-  border-radius: 1px;
-  text-align: center; }
+  padding: .625em 1em;
+  border-radius: .0625em;
+  text-align: center;
+  font-size: 1rem; }
 
 .moh-button:hover {
   background-color: #4C4A7C;
-  border: 2px solid #C9B450;
+  border: 0.125em solid #C9B450;
   color: #FFFAE4; }
 
 .light-blue {
@@ -84,15 +85,19 @@
 
 .welcome-row {
   display: flex;
-  justify-content: center; }
+  justify-content: center;
+  margin: 16vh auto; }
   .welcome-row .welcome-col {
     display: flex;
     width: 40%;
-    height: 320px;
     flex-direction: column; }
 
+html {
+  font-size: 14px; }
+
 a, li {
-  color: #FFFAE4; }
+  color: #FFFAE4;
+  font-size: 1rem; }
 
 body {
   font-family: 'Raleway', 'Roboto', arial,  sans-serif;
@@ -100,7 +105,10 @@ body {
   background-color: #FFFAE4; }
 
 h1 {
-  font-family: 'Lora', serif; }
+  font-size: 3rem; }
+
+h2 {
+  font-size: 1.5rem; }
 
 .col-text {
   flex-direction: column;
@@ -124,7 +132,8 @@ h1 {
     width: 50%;
     justify-content: center;
     align-items: center;
-    position: relative; }
+    position: relative;
+    opacity: 1; }
     .row .col-2 img {
       height: 95%; }
     .row .col-2 .col-div {
@@ -154,6 +163,61 @@ h1 {
   .row .col-2:hover .txt-div {
     visibility: hidden; }
 
+.for-flex-direction {
+  flex-direction: row;
+  position: absolute;
+  right: 0; }
+
+.showInfo, .arrowInfo {
+  background-color: #FFFAE4;
+  border: 0.2em solid #414142;
+  color: #414142;
+  border-radius: .06em;
+  font-size: .75em;
+  height: 2em;
+  display: flex;
+  align-items: center;
+  padding: 1em;
+  cursor: pointer;
+  border-radius: .6em; }
+  .showInfo span, .arrowInfo span {
+    text-align: center; }
+
+.infoDiv {
+  position: absolute;
+  height: 33.33%;
+  top: 16.5%;
+  width: 80%;
+  background-color: #FFFAE4;
+  opacity: 0.9;
+  border-radius: .6em;
+  visibility: hidden;
+  right: 2em; }
+
+.visibility {
+  visibility: visible; }
+
+.hide {
+  visibility: hidden; }
+
+@media screen and (max-width: 900px) {
+  .html {
+    font-size: 10px; }
+
+  .row {
+    flex-direction: column;
+    width: 100%;
+    align-items: center; }
+    .row .col-2, .row .gallery-grid {
+      width: 80%;
+      height: 80vw; }
+      .row .col-2 img, .row .gallery-grid img {
+        width: 80vw; }
+    .row .col-text {
+      margin-bottom: 0; }
+
+  .reversible {
+    flex-direction: column-reverse; } }
 .gallery-grid {
   display: flex;
   flex-wrap: wrap;
