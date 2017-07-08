@@ -10,14 +10,7 @@
     <title>Stones</title>
     <?php wp_head(); ?>
 
-    <!-- Bootstrap core CSS -->
-<!--     <link href="css/style.css" rel="stylesheet">
 
-    <link href="https://fonts.googleapis.com/css?family=Raleway:100, 300, 400" rel="stylesheet">
-    <script src="../../assets/js/ie-emulation-modes-warning.js"></script>
-    <script src="js/stones.js"></script> 
-    <link href="https://fonts.googleapis.com/css?family=Raleway:100, 300, 400" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Lora" rel="stylesheet"> --> 
 
   </head>
   <body>
