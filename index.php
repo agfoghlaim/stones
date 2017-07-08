@@ -47,8 +47,8 @@
       </div>
       
       <div class="row">
-        <div class="col-2 purple" id="headstones-slide">
-        <img src="" name="slider" alt="" id="imgHere" data-describe="" id="headstones-image" class="headstone-image">
+        <div class="col-2 purple headstones" id="headstone">
+        <img src="" name="headstoneSlider" alt="" id="imgHere" data-describe="" id="headstones-image" class="headstone-image for-slides">
 
             <?php 
               if( have_posts() ): 
@@ -64,15 +64,17 @@
           <div class="arrowInfo"><span>></span></div>
         </div>
         <div class="infoDiv">
-            <h4 id="slide-desc-head"></h4>
-            <p id="slide-desc-p"></p>
+            <h4 id="headstone-head"></h4>
+            <p id="headstone-p"></p>
         </div>
       </div>
           <div class="col-2 col-text">
             <!-- <h2>Headstones</h2> -->
             <!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p> -->
                <?php 
-            $welcome = new WP_Query( array( 'cat' => 5 ) );
+            //$welcome = new WP_Query( array( 'cat' => 5 ) );
+                $cat_name = "headstones";//ie cat slug
+                  $welcome = new WP_Query( array( 'category_name' => $cat_name ) );
               if ( $welcome->have_posts() ) {
                 echo '<h2>';
                   while ( $welcome->have_posts() ) {
@@ -81,6 +83,10 @@
                   }
                     echo '</h2><p>';
                     echo get_the_content();
+                    //echo '<h1>' . get_cat_name( 5 ) .'<h1>';
+                    //var_dump(get_the_category(5));
+                    //get_the_category()->slug;
+
                     echo '</p>';
                    /* Restore original Post Data */
                  wp_reset_postdata();
@@ -101,15 +107,21 @@
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p> -->
 
                  <?php 
-            $welcome = new WP_Query( array( 'cat' => 6 ) );//category 6 is sculptures
+            //$welcome = new WP_Query( array( 'cat' => 6 ) );//category 6 is sculptures
+                 $cat_name = "headstones";//ie cat slug
+                  $welcome = new WP_Query( array( 'category_name' => $cat_name ) );
+       
               if ( $welcome->have_posts() ) {
                 echo '<h2>';
                   while ( $welcome->have_posts() ) {
                   $welcome->the_post();
+
                   echo get_the_title();
+               
                   }
                     echo '</h2><p>';
                     echo get_the_content();
+                   // echo get_the_title($welcome->ID);
                     echo '</p>';
                    /* Restore original Post Data */
                  wp_reset_postdata();
@@ -121,8 +133,8 @@
             <p><a href="#" class="moh-button">Enquire About Sculptures</a></p>
         </div>
        
-        <div class="col-2 yellow" id="sculptures-slide">
-        <img src="" name="sculptureSlider" alt="" id="imgHere">
+        <div class="col-2 yellow" id="sculpture">
+        <img src="" name="sculptureSlider" alt="" id="imgHere" data-describe="">
              <?php 
               if( have_posts() ): 
                 while( have_posts() ): the_post();
@@ -139,8 +151,8 @@
                 <div class="arrowInfo"><span>></span></div>
               </div>
               <div class="infoDiv">
-                <h4 id="slide-desc-head" class="slide-desc-head"></h4>
-                <p id="slide-desc-p" class="slide-desc-p"></p>
+                <h4 id="sculpture-head" class="slide-desc-head"></h4>
+                <p id="sculpture-p" class="slide-desc-p"></p>
               </div>
 
         </div>
@@ -149,8 +161,8 @@
 
 
       <div class="row">
-        <div class="col-2 purple" id="plaques-slide">
-          <img src="" name="plaqueSlider" alt="" id="imgHere">
+        <div class="col-2 purple" id="plaque">
+          <img src="" name="plaqueSlider"  data-describe="" alt="" id="imgHere">
 
                <?php 
               if( have_posts() ): 
@@ -162,6 +174,16 @@
   
           <div class="col-div purple"></div>
           <div class="txt-div "><h3>Plaques</h3></div>
+          <div class="for-flex-direction">
+            <div class="showInfo"><span class="toggle-plus-minus">+</span></div>
+            <div class="arrowInfo"><span>></span></div>
+          </div>
+          <div class="infoDiv">
+            <h4 id="plaque-head"></h4>
+            <p id="plaque-p"></p>
+          </div>
+
+
         </div>
           <div class="col-2 col-text">
           <?php
@@ -201,7 +223,7 @@
           <div class="grid-div" >
             <img src="<?php echo get_template_directory_uri() . '/img/concertinaSquare.jpg' ?>" alt="" class="flex">
             <div class="col-div blue" ></div>
-           <!--  <div class="txt-div"><h3>Concertina</h3></div> -->
+          <div class="txt-div"><h3>Concertina</h3></div>
             <div class="txt-hidden"><p>A bit about the concertina.</p></div>
           </div>
           <div class="grid-div">
