@@ -1,9 +1,24 @@
 <?php 
+if( ! defined( 'ABSPATH')){
+  exit;
+}
+require_once('inc/ajax.php');
+require_once('inc/custom-post-types.php');
+require_once('inc/shortcodes.php');
 
 function stones_enqueue_scripts(){
 
 	wp_enqueue_style( 'stonesstyle', get_template_directory_uri() . '/css/style.css', array(), '1.0.0', 'all' );
-	wp_enqueue_script('stonesjs', get_template_directory_uri() . '/js/stones.js', array(), '1.0.0', true);
+	if (is_front_page()){
+		wp_enqueue_script('stonesjs', get_template_directory_uri() . '/js/stones.js', array(), '1.0.0', true);
+	}
+	if(is_page('contact')){
+		wp_enqueue_script('contactjs', get_template_directory_uri() . '/js/contact.js', array('jquery'), '1.0.0', true);
+		  wp_localize_script('contactjs', 'stonesAjax', array(
+	      'contact_security' => wp_create_nonce('stones_contact_nonce'),
+	      'ajaxurl'  => admin_url('admin-ajax.php')
+	      ));
+	}
 
 }
 add_action('wp_enqueue_scripts', 'stones_enqueue_scripts' );
@@ -49,3 +64,6 @@ function stones_get_gallery($num = 2){
 	endif;
 	return $output;
 }
+
+
+

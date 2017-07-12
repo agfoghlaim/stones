@@ -60,8 +60,8 @@
         <div class="col-div purple"></div>  
         <div class="txt-div "><h3 id="headstone-h3">Headstones and Memorials</h3></div>
         <div class="for-flex-direction">
-          <div class="showInfo"><span class="toggle-plus-minus">+</span></div>
-          <div class="arrowInfo"><span>></span></div>
+          <div tabindex="0" class="showInfo"><span class="toggle-plus-minus">+</span></div>
+          <div tabindex="0" class="arrowInfo"><span>></span></div>
         </div>
         <div class="infoDiv">
             <h4 id="headstone-head"></h4>
@@ -147,8 +147,8 @@
         <div class="txt-div"><h3>Sculptures</h3></div>
 
              <div class="for-flex-direction">
-                <div class="showInfo"><span class="toggle-plus-minus">+</span></div>
-                <div class="arrowInfo"><span>></span></div>
+                <div tabindex="0" class="showInfo"><span class="toggle-plus-minus">+</span></div>
+                <div tabindex="0" class="arrowInfo"><span>></span></div>
               </div>
               <div class="infoDiv">
                 <h4 id="sculpture-head" class="slide-desc-head"></h4>
@@ -175,8 +175,8 @@
           <div class="col-div purple"></div>
           <div class="txt-div "><h3>Plaques</h3></div>
           <div class="for-flex-direction">
-            <div class="showInfo"><span class="toggle-plus-minus">+</span></div>
-            <div class="arrowInfo"><span>></span></div>
+            <div tabindex="0" class="showInfo"><span class="toggle-plus-minus">+</span></div>
+            <div tabindex="0" class="arrowInfo"><span>></span></div>
           </div>
           <div class="infoDiv">
             <h4 id="plaque-head"></h4>
